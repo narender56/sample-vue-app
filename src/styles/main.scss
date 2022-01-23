@@ -1,0 +1,158 @@
+// @import '~balloon-css/src/balloon';
+
+@import './scss/height.scss';
+@import './scss/width.scss';
+@import './scss/flex-box.scss';
+@import './scss/spacing.scss';
+@import './scss//font-size.scss';
+@import './scss/border-radius.scss';
+@import './scss/line-height.scss';
+@import './scss/font-family.scss';
+@import './scss/border.scss';
+@import './scss/border-color.scss';
+@import './scss/border-radius.scss';
+@import './scss/border-width.scss';
+@import './scss/color.scss';
+@import './scss/font-weight.scss';
+@import './scss/overflow.scss';
+@import './scss/position.scss';
+@import './scss/background-color.scss';
+@import './scss/z-index.scss';
+
+// Balloon CSS Overrides here
+:root {
+  --balloon-border-radius: 5px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* text-decoration */
+$decoration: (
+  overline: overline,
+  line-through: line-through,
+  underline: underline,
+  none: none
+);
+
+@each $name, $val in $decoration {
+  .text-decoration-#{$name} {
+    text-decoration: #{$val};
+  }
+};
+
+/* text-alignment */
+$alignment: (
+  center: center,
+  left: left,
+  right: right,
+  justify: justify
+);
+
+@each $name, $val in $alignment {
+  .text-#{$name} {
+    text-align: #{$val};
+  }
+};
+
+$transforms: (
+  uppercase: uppercase,
+  lowercase: lowercase,
+  capitalize: capitalize
+);
+
+@each $name, $val in $transforms {
+  .#{$name} {
+    text-transform: $val;
+  }
+}
+
+$display: (
+  inline: inline,
+  inline-block: inline-block,
+  block: block,
+  none: none
+);
+
+@each $name, $val in $display {
+  .#{$name} {
+    display: #{$val};
+  }
+};
+
+.box-shadow {
+  box-shadow: 0px 1px 5px #bbb;
+}
+
+.text-elipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.error {
+  position: absolute;
+  top: -2px;
+  z-index: -1;
+  width: 100%;
+  border-bottom-right-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #bbbbbb;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+
+.opacity1 {
+  opacity: 1;
+}
+
+.animate {
+  transition: ease all .7s;
+}
+
+.move-left {
+  margin-left: -50%;
+  margin-right: 50%;
+}
+
+.move-right {
+  margin-left: 0;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  background: rgb(83, 83, 83);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.word-break {
+  word-break: break-all;
+}

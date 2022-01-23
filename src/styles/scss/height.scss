@@ -1,0 +1,51 @@
+// stylelint-disable no-eol-whitespace
+
+/* Heights */
+
+$heights: (
+  0: 0,
+  10: 0.625rem,
+  16: 1rem,
+  24: 1.5rem,
+  32: 2rem,
+  38: 2.375rem,
+  40: 2.5rem,
+  48: 3rem,
+  50: 3.2rem,
+  56: 3.5rem,
+  64: 4rem,
+  68: 4.30rem,
+  80: 5rem,
+  96: 6rem,
+  160: 10rem,
+  288: 18rem,
+  auto: auto,
+  '25p': 25%,
+  '60p': 60%,
+  '70p': 70%,
+  '75p': 75%,
+  '85p': 85%,
+  '90p': 90%,
+  '91p': 91%,
+  '95p': 95%,
+  '100p': 100%,
+  '60vh': 60vh,
+  '90vh': 90vh,
+  '91vh': 91vh,
+  '92vh': 92vh,
+  '100vh': 100vh
+);
+
+@each $name, $val in $heights {
+  .h#{$name} {
+    height: #{$val};
+  }
+
+  .minh#{$name} {
+    min-height: #{$val};
+  }
+
+  .maxh#{$name} {
+    max-height: #{$val};
+  }
+}

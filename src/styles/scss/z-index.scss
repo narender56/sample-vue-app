@@ -1,0 +1,35 @@
+@import './breakpoints.scss';
+
+$indexes: (
+  '-1': -1,
+  '-999': -999,
+  0: 0,
+  1: 1,
+  9: 9,
+  99: 99,
+  999: 999
+);
+
+@each $name, $val in $indexes {
+  .z#{$name} {
+    z-index: #{$val};
+  }
+}
+
+@each $name, $val in $widths {
+  @include mb(w#{$name}) {
+    z-index: #{$val};
+  }
+}
+
+@each $name, $val in $widths {
+  @include tb(w#{$name}) {
+    width: #{$val};
+  }
+}
+
+@each $name, $val in $widths {
+  @include dk(w#{$name}) {
+    width: #{$val};
+  }
+}

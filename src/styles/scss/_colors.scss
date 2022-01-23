@@ -1,0 +1,36 @@
+// stylelint-disable no-eol-whitespace
+
+/* doc
+---
+title: colors
+name: colors
+category: colors
+---
+## _colors
+Color variables imported into other scss files
+[Color names](http://www.color-blindness.com/color-name-hue/)
+[Color adjustment matching tool](https://codepen.io/nikolaygit/pen/usefk)
+*/
+// stylelint-enable
+
+$colors: (
+  red: #ff0000,
+  theme: #2973ff,
+  light-theme: #278bd1,
+  white: #ffffff,
+  gray: #E5ECFF,
+  medium-gray: #E9E7E7,
+  dark-gray: #ADAFB2,
+  dark-gray-shade: #ffffff80,
+  dark-gray-2: #969291,
+  light-red: #ff7b7b,
+  light-gray: #faf9f9 ,
+  light-green: #5DB200,
+  lighter-green: #3BB58E,
+  blue: #4A90E2,
+  contrast-blue: #39b3ff,
+  dark-blue: #5B7083,
+  light-blue: #E6FFF7,
+  black: #000000,
+  warning: #faad13
+);
