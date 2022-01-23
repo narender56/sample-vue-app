@@ -1,0 +1,59 @@
+@import './_breakpoints.scss';
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-flow: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.none {
+  display: none;
+}
+
+/* Justify Content */
+$justifies: (
+  justify-start: flex-start,
+  justify-end: flex-end,
+  justify-center: center,
+  justify-between: space-between,
+  justify-around: space-around
+);
+
+@each $name,
+$val in $justifies {
+  .#{$name} {
+    justify-content: #{$val};
+  }
+}
+
+/* Align Items */
+$aligns: (
+  align-start: flex-start,
+  align-end: flex-end,
+  align-center: center
+);
+
+@each $name,
+$val in $aligns {
+  .#{$name} {
+    align-items: #{$val};
+  }
+}
+
+$flexes: (
+  1: 1,
+  2: 2,
+  3: 3
+);
+
+@each $name, $val in $flexes {
+  .flex#{$name} {
+    flex: #{$val};
+  }
+}
